@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6720A2AA1DD873F200C6BE3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2A91DD873F200C6BE3E /* AppDelegate.swift */; };
+		6720A2AC1DD873F200C6BE3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2AB1DD873F200C6BE3E /* ViewController.swift */; };
+		6720A2AF1DD873F200C6BE3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2AD1DD873F200C6BE3E /* Main.storyboard */; };
+		6720A2B21DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2B01DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld */; };
+		6720A2B41DD873F200C6BE3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2B31DD873F200C6BE3E /* Assets.xcassets */; };
+		6720A2B71DD873F200C6BE3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */; };
+		6720A2C21DD873F200C6BE3E /* Book_My_AppointmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2C11DD873F200C6BE3E /* Book_My_AppointmentTests.swift */; };
+		6720A2CD1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6720A2BE1DD873F200C6BE3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6720A29E1DD873F200C6BE3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6720A2A51DD873F200C6BE3E;
+			remoteInfo = "Book My Appointment";
+		};
+		6720A2C91DD873F200C6BE3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6720A29E1DD873F200C6BE3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6720A2A51DD873F200C6BE3E;
+			remoteInfo = "Book My Appointment";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6720A2A61DD873F200C6BE3E /* Book My Appointment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book My Appointment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6720A2A91DD873F200C6BE3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6720A2AB1DD873F200C6BE3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6720A2AE1DD873F200C6BE3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6720A2B11DD873F200C6BE3E /* Book_My_Appointment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Book_My_Appointment.xcdatamodel; sourceTree = "<group>"; };
+		6720A2B31DD873F200C6BE3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6720A2B61DD873F200C6BE3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6720A2B81DD873F200C6BE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6720A2BD1DD873F200C6BE3E /* Book My AppointmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book My AppointmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6720A2C11DD873F200C6BE3E /* Book_My_AppointmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_My_AppointmentTests.swift; sourceTree = "<group>"; };
+		6720A2C31DD873F200C6BE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6720A2C81DD873F200C6BE3E /* Book My AppointmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book My AppointmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_My_AppointmentUITests.swift; sourceTree = "<group>"; };
+		6720A2CE1DD873F200C6BE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6720A2A31DD873F200C6BE3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6720A2BA1DD873F200C6BE3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6720A2C51DD873F200C6BE3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6720A29D1DD873F200C6BE3E = {
+			isa = PBXGroup;
+			children = (
+				6720A2A81DD873F200C6BE3E /* Book My Appointment */,
+				6720A2C01DD873F200C6BE3E /* Book My AppointmentTests */,
+				6720A2CB1DD873F200C6BE3E /* Book My AppointmentUITests */,
+				6720A2A71DD873F200C6BE3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6720A2A71DD873F200C6BE3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6720A2A61DD873F200C6BE3E /* Book My Appointment.app */,
+				6720A2BD1DD873F200C6BE3E /* Book My AppointmentTests.xctest */,
+				6720A2C81DD873F200C6BE3E /* Book My AppointmentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6720A2A81DD873F200C6BE3E /* Book My Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				6720A2A91DD873F200C6BE3E /* AppDelegate.swift */,
+				6720A2AB1DD873F200C6BE3E /* ViewController.swift */,
+				6720A2AD1DD873F200C6BE3E /* Main.storyboard */,
+				6720A2B31DD873F200C6BE3E /* Assets.xcassets */,
+				6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */,
+				6720A2B81DD873F200C6BE3E /* Info.plist */,
+				6720A2B01DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld */,
+			);
+			path = "Book My Appointment";
+			sourceTree = "<group>";
+		};
+		6720A2C01DD873F200C6BE3E /* Book My AppointmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				6720A2C11DD873F200C6BE3E /* Book_My_AppointmentTests.swift */,
+				6720A2C31DD873F200C6BE3E /* Info.plist */,
+			);
+			path = "Book My AppointmentTests";
+			sourceTree = "<group>";
+		};
+		6720A2CB1DD873F200C6BE3E /* Book My AppointmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */,
+				6720A2CE1DD873F200C6BE3E /* Info.plist */,
+			);
+			path = "Book My AppointmentUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6720A2A51DD873F200C6BE3E /* Book My Appointment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6720A2D11DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My Appointment" */;
+			buildPhases = (
+				6720A2A21DD873F200C6BE3E /* Sources */,
+				6720A2A31DD873F200C6BE3E /* Frameworks */,
+				6720A2A41DD873F200C6BE3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Book My Appointment";
+			productName = "Book My Appointment";
+			productReference = 6720A2A61DD873F200C6BE3E /* Book My Appointment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6720A2BC1DD873F200C6BE3E /* Book My AppointmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6720A2D41DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentTests" */;
+			buildPhases = (
+				6720A2B91DD873F200C6BE3E /* Sources */,
+				6720A2BA1DD873F200C6BE3E /* Frameworks */,
+				6720A2BB1DD873F200C6BE3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6720A2BF1DD873F200C6BE3E /* PBXTargetDependency */,
+			);
+			name = "Book My AppointmentTests";
+			productName = "Book My AppointmentTests";
+			productReference = 6720A2BD1DD873F200C6BE3E /* Book My AppointmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6720A2C71DD873F200C6BE3E /* Book My AppointmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6720A2D71DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentUITests" */;
+			buildPhases = (
+				6720A2C41DD873F200C6BE3E /* Sources */,
+				6720A2C51DD873F200C6BE3E /* Frameworks */,
+				6720A2C61DD873F200C6BE3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6720A2CA1DD873F200C6BE3E /* PBXTargetDependency */,
+			);
+			name = "Book My AppointmentUITests";
+			productName = "Book My AppointmentUITests";
+			productReference = 6720A2C81DD873F200C6BE3E /* Book My AppointmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6720A29E1DD873F200C6BE3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Book My Appointment";
+				TargetAttributes = {
+					6720A2A51DD873F200C6BE3E = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					6720A2BC1DD873F200C6BE3E = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6720A2A51DD873F200C6BE3E;
+					};
+					6720A2C71DD873F200C6BE3E = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6720A2A51DD873F200C6BE3E;
+					};
+				};
+			};
+			buildConfigurationList = 6720A2A11DD873F200C6BE3E /* Build configuration list for PBXProject "Book My Appointment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6720A29D1DD873F200C6BE3E;
+			productRefGroup = 6720A2A71DD873F200C6BE3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6720A2A51DD873F200C6BE3E /* Book My Appointment */,
+				6720A2BC1DD873F200C6BE3E /* Book My AppointmentTests */,
+				6720A2C71DD873F200C6BE3E /* Book My AppointmentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6720A2A41DD873F200C6BE3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6720A2B71DD873F200C6BE3E /* LaunchScreen.storyboard in Resources */,
+				6720A2B41DD873F200C6BE3E /* Assets.xcassets in Resources */,
+				6720A2AF1DD873F200C6BE3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6720A2BB1DD873F200C6BE3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6720A2C61DD873F200C6BE3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6720A2A21DD873F200C6BE3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6720A2AC1DD873F200C6BE3E /* ViewController.swift in Sources */,
+				6720A2B21DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld in Sources */,
+				6720A2AA1DD873F200C6BE3E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6720A2B91DD873F200C6BE3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6720A2C21DD873F200C6BE3E /* Book_My_AppointmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6720A2C41DD873F200C6BE3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6720A2CD1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6720A2BF1DD873F200C6BE3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6720A2A51DD873F200C6BE3E /* Book My Appointment */;
+			targetProxy = 6720A2BE1DD873F200C6BE3E /* PBXContainerItemProxy */;
+		};
+		6720A2CA1DD873F200C6BE3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6720A2A51DD873F200C6BE3E /* Book My Appointment */;
+			targetProxy = 6720A2C91DD873F200C6BE3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6720A2AD1DD873F200C6BE3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6720A2AE1DD873F200C6BE3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6720A2B61DD873F200C6BE3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6720A2CF1DD873F200C6BE3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6720A2D01DD873F200C6BE3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6720A2D21DD873F200C6BE3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Book My Appointment/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-Appointment";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6720A2D31DD873F200C6BE3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Book My Appointment/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-Appointment";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6720A2D51DD873F200C6BE3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Book My AppointmentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-AppointmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Book My Appointment.app/Book My Appointment";
+			};
+			name = Debug;
+		};
+		6720A2D61DD873F200C6BE3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Book My AppointmentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-AppointmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Book My Appointment.app/Book My Appointment";
+			};
+			name = Release;
+		};
+		6720A2D81DD873F200C6BE3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Book My AppointmentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-AppointmentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Book My Appointment";
+			};
+			name = Debug;
+		};
+		6720A2D91DD873F200C6BE3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Book My AppointmentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-AppointmentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Book My Appointment";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6720A2A11DD873F200C6BE3E /* Build configuration list for PBXProject "Book My Appointment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6720A2CF1DD873F200C6BE3E /* Debug */,
+				6720A2D01DD873F200C6BE3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6720A2D11DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My Appointment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6720A2D21DD873F200C6BE3E /* Debug */,
+				6720A2D31DD873F200C6BE3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6720A2D41DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6720A2D51DD873F200C6BE3E /* Debug */,
+				6720A2D61DD873F200C6BE3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6720A2D71DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6720A2D81DD873F200C6BE3E /* Debug */,
+				6720A2D91DD873F200C6BE3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6720A2B01DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6720A2B11DD873F200C6BE3E /* Book_My_Appointment.xcdatamodel */,
+			);
+			currentVersion = 6720A2B11DD873F200C6BE3E /* Book_My_Appointment.xcdatamodel */;
+			path = Book_My_Appointment.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6720A29E1DD873F200C6BE3E /* Project object */;
+}
