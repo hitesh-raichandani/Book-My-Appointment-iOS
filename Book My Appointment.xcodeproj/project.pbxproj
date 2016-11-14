@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6720A2AA1DD873F200C6BE3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2A91DD873F200C6BE3E /* AppDelegate.swift */; };
-		6720A2AC1DD873F200C6BE3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2AB1DD873F200C6BE3E /* ViewController.swift */; };
 		6720A2AF1DD873F200C6BE3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2AD1DD873F200C6BE3E /* Main.storyboard */; };
 		6720A2B21DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2B01DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld */; };
 		6720A2B41DD873F200C6BE3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2B31DD873F200C6BE3E /* Assets.xcassets */; };
 		6720A2B71DD873F200C6BE3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */; };
 		6720A2C21DD873F200C6BE3E /* Book_My_AppointmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2C11DD873F200C6BE3E /* Book_My_AppointmentTests.swift */; };
 		6720A2CD1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */; };
+		67E23F401DD87E56001F21DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67E23F3F1DD87E56001F21DF /* GoogleService-Info.plist */; };
+		67E23F431DD8880C001F21DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E23F421DD8880C001F21DF /* LoginViewController.swift */; };
+		83026035D816219B72B5AA77 /* Pods_Book_My_Appointment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3F92EE6EBF7A38ED63A4BC /* Pods_Book_My_Appointment.framework */; };
+		A6A987371A60CC00AC4A5A85 /* Pods_Book_My_AppointmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF790B74D867CAB39081B18 /* Pods_Book_My_AppointmentUITests.framework */; };
+		F08918B085C7728715AE37CF /* Pods_Book_My_AppointmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D551E40C81D1A0DDABB7CC9 /* Pods_Book_My_AppointmentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3F92EE6EBF7A38ED63A4BC /* Pods_Book_My_Appointment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_My_Appointment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17DDACE19C47AC5952849472 /* Pods-Book My AppointmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My AppointmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Book My AppointmentTests/Pods-Book My AppointmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D551E40C81D1A0DDABB7CC9 /* Pods_Book_My_AppointmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_My_AppointmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C536D3161935581339C590A /* Pods-Book My AppointmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My AppointmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Book My AppointmentUITests/Pods-Book My AppointmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6720A2A61DD873F200C6BE3E /* Book My Appointment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book My Appointment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6720A2A91DD873F200C6BE3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6720A2AB1DD873F200C6BE3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6720A2AE1DD873F200C6BE3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6720A2B11DD873F200C6BE3E /* Book_My_Appointment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Book_My_Appointment.xcdatamodel; sourceTree = "<group>"; };
 		6720A2B31DD873F200C6BE3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		6720A2C81DD873F200C6BE3E /* Book My AppointmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book My AppointmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_My_AppointmentUITests.swift; sourceTree = "<group>"; };
 		6720A2CE1DD873F200C6BE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67E23F3F1DD87E56001F21DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Book My Appointment/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		67E23F421DD8880C001F21DF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		759BBF142BE2C477B0AADE1E /* Pods-Book My AppointmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My AppointmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Book My AppointmentTests/Pods-Book My AppointmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B64DFB943CC21B5C0F7DF7F /* Pods-Book My AppointmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My AppointmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Book My AppointmentUITests/Pods-Book My AppointmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CB8FB245764067573D66372 /* Pods-Book My Appointment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My Appointment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Book My Appointment/Pods-Book My Appointment.debug.xcconfig"; sourceTree = "<group>"; };
+		EDF790B74D867CAB39081B18 /* Pods_Book_My_AppointmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_My_AppointmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F56C7F6C8BD56B13BB63E3E1 /* Pods-Book My Appointment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My Appointment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Book My Appointment/Pods-Book My Appointment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83026035D816219B72B5AA77 /* Pods_Book_My_Appointment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08918B085C7728715AE37CF /* Pods_Book_My_AppointmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A987371A60CC00AC4A5A85 /* Pods_Book_My_AppointmentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A70BFE47513877CAC8DCCA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CB8FB245764067573D66372 /* Pods-Book My Appointment.debug.xcconfig */,
+				F56C7F6C8BD56B13BB63E3E1 /* Pods-Book My Appointment.release.xcconfig */,
+				759BBF142BE2C477B0AADE1E /* Pods-Book My AppointmentTests.debug.xcconfig */,
+				17DDACE19C47AC5952849472 /* Pods-Book My AppointmentTests.release.xcconfig */,
+				9B64DFB943CC21B5C0F7DF7F /* Pods-Book My AppointmentUITests.debug.xcconfig */,
+				5C536D3161935581339C590A /* Pods-Book My AppointmentUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6720A29D1DD873F200C6BE3E = {
 			isa = PBXGroup;
 			children = (
+				67E23F3F1DD87E56001F21DF /* GoogleService-Info.plist */,
 				6720A2A81DD873F200C6BE3E /* Book My Appointment */,
+				6720A2A71DD873F200C6BE3E /* Products */,
+				3A70BFE47513877CAC8DCCA7 /* Pods */,
+				67E23F2A1DD874D7001F21DF /* Frameworks */,
 				6720A2C01DD873F200C6BE3E /* Book My AppointmentTests */,
 				6720A2CB1DD873F200C6BE3E /* Book My AppointmentUITests */,
-				6720A2A71DD873F200C6BE3E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				6720A2A91DD873F200C6BE3E /* AppDelegate.swift */,
-				6720A2AB1DD873F200C6BE3E /* ViewController.swift */,
+				67E23F411DD885A3001F21DF /* Controllers */,
 				6720A2AD1DD873F200C6BE3E /* Main.storyboard */,
 				6720A2B31DD873F200C6BE3E /* Assets.xcassets */,
 				6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */,
@@ -128,6 +161,24 @@
 			path = "Book My AppointmentUITests";
 			sourceTree = "<group>";
 		};
+		67E23F2A1DD874D7001F21DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D3F92EE6EBF7A38ED63A4BC /* Pods_Book_My_Appointment.framework */,
+				3D551E40C81D1A0DDABB7CC9 /* Pods_Book_My_AppointmentTests.framework */,
+				EDF790B74D867CAB39081B18 /* Pods_Book_My_AppointmentUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67E23F411DD885A3001F21DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				67E23F421DD8880C001F21DF /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6720A2D11DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My Appointment" */;
 			buildPhases = (
+				8C0EA8EFCCFDD46BF3C9FF1E /* [CP] Check Pods Manifest.lock */,
 				6720A2A21DD873F200C6BE3E /* Sources */,
 				6720A2A31DD873F200C6BE3E /* Frameworks */,
 				6720A2A41DD873F200C6BE3E /* Resources */,
+				2A66818BB3841D6C60A1299F /* [CP] Embed Pods Frameworks */,
+				1CDCB468818EC8BA926F9F42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6720A2D41DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentTests" */;
 			buildPhases = (
+				3DF3CAE6F335E6BB6B55C078 /* [CP] Check Pods Manifest.lock */,
 				6720A2B91DD873F200C6BE3E /* Sources */,
 				6720A2BA1DD873F200C6BE3E /* Frameworks */,
 				6720A2BB1DD873F200C6BE3E /* Resources */,
+				29AC3CABCD7E2F9AA1AD29AF /* [CP] Embed Pods Frameworks */,
+				7D08E5CCE3648E03F34BF1D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6720A2D71DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentUITests" */;
 			buildPhases = (
+				BC7805F250F66264D28F3C29 /* [CP] Check Pods Manifest.lock */,
 				6720A2C41DD873F200C6BE3E /* Sources */,
 				6720A2C51DD873F200C6BE3E /* Frameworks */,
 				6720A2C61DD873F200C6BE3E /* Resources */,
+				7C89EB089F39CA16939D8B94 /* [CP] Embed Pods Frameworks */,
+				05E25C17AADDBC5BD798686A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +256,7 @@
 				TargetAttributes = {
 					6720A2A51DD873F200C6BE3E = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J3C98EL9Z5;
 						ProvisioningStyle = Automatic;
 					};
 					6720A2BC1DD873F200C6BE3E = {
@@ -236,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6720A2B71DD873F200C6BE3E /* LaunchScreen.storyboard in Resources */,
+				67E23F401DD87E56001F21DF /* GoogleService-Info.plist in Resources */,
 				6720A2B41DD873F200C6BE3E /* Assets.xcassets in Resources */,
 				6720A2AF1DD873F200C6BE3E /* Main.storyboard in Resources */,
 			);
@@ -257,12 +319,150 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05E25C17AADDBC5BD798686A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Book My AppointmentUITests/Pods-Book My AppointmentUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CDCB468818EC8BA926F9F42 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Book My Appointment/Pods-Book My Appointment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29AC3CABCD7E2F9AA1AD29AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Book My AppointmentTests/Pods-Book My AppointmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A66818BB3841D6C60A1299F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Book My Appointment/Pods-Book My Appointment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DF3CAE6F335E6BB6B55C078 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C89EB089F39CA16939D8B94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Book My AppointmentUITests/Pods-Book My AppointmentUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D08E5CCE3648E03F34BF1D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Book My AppointmentTests/Pods-Book My AppointmentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C0EA8EFCCFDD46BF3C9FF1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC7805F250F66264D28F3C29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6720A2A21DD873F200C6BE3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6720A2AC1DD873F200C6BE3E /* ViewController.swift in Sources */,
+				67E23F431DD8880C001F21DF /* LoginViewController.swift in Sources */,
 				6720A2B21DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld in Sources */,
 				6720A2AA1DD873F200C6BE3E /* AppDelegate.swift in Sources */,
 			);
@@ -414,30 +614,71 @@
 		};
 		6720A2D21DD873F200C6BE3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CB8FB245764067573D66372 /* Pods-Book My Appointment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = J3C98EL9Z5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					/Users/hitesh/ios/Book,
+					My,
+				);
 				INFOPLIST_FILE = "Book My Appointment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(inherited) -ObjC -l\"c++\" -l\"sqlite3\" -l\"z\" -framework \"AddressBook\" -framework \"FirebaseAnalytics\" -framework \"FirebaseCore\" -framework \"FirebaseInstanceID\" -framework \"GoogleInterchangeUtilities\" -framework \"GoogleSymbolUtilities\" -framework \"GoogleToolboxForMac\" -framework \"StoreKit\" -framework \"SystemConfiguration\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-Appointment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		6720A2D31DD873F200C6BE3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56C7F6C8BD56B13BB63E3E1 /* Pods-Book My Appointment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = J3C98EL9Z5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					/Users/hitesh/ios/Book,
+					My,
+				);
 				INFOPLIST_FILE = "Book My Appointment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(inherited) -ObjC -l\"c++\" -l\"sqlite3\" -l\"z\" -framework \"AddressBook\" -framework \"FirebaseAnalytics\" -framework \"FirebaseCore\" -framework \"FirebaseInstanceID\" -framework \"GoogleInterchangeUtilities\" -framework \"GoogleSymbolUtilities\" -framework \"GoogleToolboxForMac\" -framework \"StoreKit\" -framework \"SystemConfiguration\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.scu.Book-My-Appointment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		6720A2D51DD873F200C6BE3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 759BBF142BE2C477B0AADE1E /* Pods-Book My AppointmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +693,7 @@
 		};
 		6720A2D61DD873F200C6BE3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17DDACE19C47AC5952849472 /* Pods-Book My AppointmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,6 +708,7 @@
 		};
 		6720A2D81DD873F200C6BE3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B64DFB943CC21B5C0F7DF7F /* Pods-Book My AppointmentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Book My AppointmentUITests/Info.plist";
@@ -479,6 +722,7 @@
 		};
 		6720A2D91DD873F200C6BE3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C536D3161935581339C590A /* Pods-Book My AppointmentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Book My AppointmentUITests/Info.plist";
@@ -509,6 +753,7 @@
 				6720A2D31DD873F200C6BE3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6720A2D41DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +762,7 @@
 				6720A2D61DD873F200C6BE3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6720A2D71DD873F200C6BE3E /* Build configuration list for PBXNativeTarget "Book My AppointmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +771,7 @@
 				6720A2D91DD873F200C6BE3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
