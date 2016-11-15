@@ -14,6 +14,7 @@
 		6720A2B71DD873F200C6BE3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */; };
 		6720A2C21DD873F200C6BE3E /* Book_My_AppointmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2C11DD873F200C6BE3E /* Book_My_AppointmentTests.swift */; };
 		6720A2CD1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */; };
+		6794D5221DDAFD880021B325 /* MainApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6794D5211DDAFD880021B325 /* MainApp.storyboard */; };
 		67E23F401DD87E56001F21DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67E23F3F1DD87E56001F21DF /* GoogleService-Info.plist */; };
 		67E23F431DD8880C001F21DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E23F421DD8880C001F21DF /* LoginViewController.swift */; };
 		83026035D816219B72B5AA77 /* Pods_Book_My_Appointment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3F92EE6EBF7A38ED63A4BC /* Pods_Book_My_Appointment.framework */; };
@@ -56,6 +57,7 @@
 		6720A2C81DD873F200C6BE3E /* Book My AppointmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book My AppointmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_My_AppointmentUITests.swift; sourceTree = "<group>"; };
 		6720A2CE1DD873F200C6BE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6794D5211DDAFD880021B325 /* MainApp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainApp.storyboard; sourceTree = "<group>"; };
 		67E23F3F1DD87E56001F21DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Book My Appointment/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67E23F421DD8880C001F21DF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		759BBF142BE2C477B0AADE1E /* Pods-Book My AppointmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My AppointmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Book My AppointmentTests/Pods-Book My AppointmentTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				6720A2A91DD873F200C6BE3E /* AppDelegate.swift */,
 				67E23F411DD885A3001F21DF /* Controllers */,
 				6720A2AD1DD873F200C6BE3E /* Main.storyboard */,
+				6794D5211DDAFD880021B325 /* MainApp.storyboard */,
 				6720A2B31DD873F200C6BE3E /* Assets.xcassets */,
 				6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */,
 				6720A2B81DD873F200C6BE3E /* Info.plist */,
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6720A2B71DD873F200C6BE3E /* LaunchScreen.storyboard in Resources */,
+				6794D5221DDAFD880021B325 /* MainApp.storyboard in Resources */,
 				67E23F401DD87E56001F21DF /* GoogleService-Info.plist in Resources */,
 				6720A2B41DD873F200C6BE3E /* Assets.xcassets in Resources */,
 				6720A2AF1DD873F200C6BE3E /* Main.storyboard in Resources */,

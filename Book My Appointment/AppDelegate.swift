@@ -20,6 +20,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
+        // Set viewcontroller based on auth status
+        
+        let b = false
+        if (b) {
+            let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController: LoginViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = loginViewController
+        }
+        
+        // Access the storyboard and fetch an instance of the view controller
+        
+        /* 3.
+        let b = true
+        
+        if(b) {
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var viewController: LoginViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! LoginViewController
+        
+            // Then push that view controller onto the navigation stack
+            var rootViewController = self.window!.rootViewController as! UINavigationController
+            rootViewController.pushViewController(viewController, animated: true)
+        }*/
+        
+        /* 2.
+         let storyboard = UIStoryboard(name: "MyStoryboardName", bundle: nil)
+         let controller = storyboard.instantiateViewController(withIdentifier: "someViewController")
+         self.present(controller, animated: true, completion: nil)*/
+        
+        
+        /* 1.
+         
+         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginSignupVC")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()*/
+        
         return true
     }
 
