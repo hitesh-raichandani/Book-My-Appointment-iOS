@@ -9,21 +9,22 @@
 import UIKit
 import CoreData
 import Firebase
+import FBSDKLoginKit
+import GooglePlaces
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class   AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
         
-        // Set viewcontroller based on auth status
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        let b = false
-        if (b) {
+        // Set viewcontroller based on auth status
+        if (!AppState.sharedInstance.signedIn) {
             let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
             let loginViewController: LoginViewController = mainStoryBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -61,9 +62,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()*/
         
+        // For Google Sign In
+        // Initialize Sign In
+//        var configureError: NSError?
+//        GGLContext.sharedInstance().configureWithError(&configureError)
+//        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
+        // Google places API
+        GMSPlacesClient.provideAPIKey("AIzaSyDA5dCMe__fjznjdEsgD_Byc0PFGNk4Jlw")
+
         return true
     }
-
+    
+    
+    // func for Facebook sign in and Google Sign In
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        var handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+        // Add any custom logic here
+        return handled
+        
+        
+        // For Google Sign In on iOS 8 and older
+//        var options: [String: AnyObject] = [UIApplicationOpenURLOptionsSourceApplicationKey.rawValue: sourceApplication as AnyObject, UIApplicationOpenURLOptionsAnnotationKey.rawValue: annotation as AnyObject]
+//        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+    
+    
+    // func for Google sign in
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    }
+    
+    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        print("\n\n-----\nGoogle Sign in success\n-----\n\n")
+        let authentication = user.authentication
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!, accessToken: (authentication?.accessToken)!)
+        
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            // ...
+            print("\n\n-----\nFirebase Google Authentication success\n-----\n\n")
+            
+            let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = viewController
+            
+        }
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -80,6 +140,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

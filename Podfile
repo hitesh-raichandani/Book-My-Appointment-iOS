@@ -8,6 +8,20 @@ target 'Book My Appointment' do
   # Pods for Book My Appointment
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
+    pod ‘FBSDKShareKit’
+
+    pod 'GoogleSignIn'
+
+    pod 'GooglePlaces'
+    pod 'GooglePlacePicker'
+    pod 'GoogleMaps'
+
+    pod 'FloatRatingView', '~> 2.0.0'
 
   target 'Book My AppointmentTests' do
     inherit! :search_paths
