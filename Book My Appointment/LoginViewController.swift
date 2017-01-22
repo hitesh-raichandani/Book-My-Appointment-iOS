@@ -25,9 +25,22 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
 //    @IBOutlet weak var fbLoginButton: FBSDKLoginButton!
 
     @IBOutlet weak var googleSigninButton: GIDSignInButton!
+    var bool:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "app-background")!)
+        
+        let defaults = UserDefaults()
+        
+        if(defaults.value(forKey: "is_logged_in") as! String? == "true"){
+            //defaults.register(defaults: defaultVal)
+            bool = true
+        } else{
+            let defaultVal = ["is_logged_in" : "false"]
+            defaults.register(defaults: defaultVal)
+        }
         // Do any additional setup after loading the view.
 
         // Get reference firebase root
@@ -59,6 +72,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         // if user signed in using email and password
         if let user = FIRAuth.auth()?.currentUser {
             self.signedIn(user)
+            AppState.sharedInstance.email = user.email
+            self.performSegue(withIdentifier: "loginSuccessful", sender: self)
         }
         
         // if user already signed in using fb
@@ -66,6 +81,14 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
             // User is logged in, do work such as go to next view controller.
             // use 'accessToken' here.
             print("\n\n-----\nUser already logged in using fb\n-----\n\n");
+            
+//            let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email"])
+//            graphRequest.start(completionHandler: (connection, result, error) -> Void in
+//                if error == nil{
+//                    AppState.sharedInstance.email = result["email"]
+//                }
+//            self.performSegue(withIdentifier: "loginSuccessful", sender: self)
+
         }
         
         // set GIDSingnIn object
@@ -109,10 +132,14 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         FIRAuth.auth()!.signIn(withEmail: email, password: password) { (user, error) in
             print("\n\n-----\n2. ", email, " ", password, "\n-----\n\n")
             if let error = error {
+                // alert here
+                
                 print(error.localizedDescription)
+                self.displayAlert(message: "Incorrect Email or Password!")
                 return
             }
             else {
+                AppState.sharedInstance.email = email
                 self.performSegue(withIdentifier: "loginSuccessful", sender: self)
             }
             self.signedIn(user!)
@@ -145,6 +172,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
                 let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController")
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.window?.rootViewController = viewController
+                
+                AppState.sharedInstance.email = user?.email
             }
  
         }
@@ -235,7 +264,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignIn
         userRef.child("email").setValue(email)
         userRef.child("password").setValue(password)
         
-        // Display alest message with configuration
+        // Display alert message with configuration
         
     }*/
 

@@ -22,25 +22,58 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "app-background")!)
+        self.view.backgroundColor?.withAlphaComponent(0.4)
+        
     }
     
     @IBAction func didTapSignUp(_ sender: AnyObject) {
-        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
-        FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
-            if let error = error {
-                print(error.localizedDescription)
+        
+        if emailTextField.text != "" && passwordTextField.text != "" && confirmPasswordTextField.text != ""{
+            
+            if passwordTextField.text == confirmPasswordTextField.text {
+        
+                guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
+                        if let error = error {
+                            print(error.localizedDescription)
+                            self.displayAlert(message: "Incorrect Email address")
+                            return
+                        }
+                        // Account creation successful, perform action here
+            
+                        // Store data in Firebase
+            
+                        // Open main application view controller
+                        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+                        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController")
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.window?.rootViewController = viewController
+                }
+            }else {
+                self.displayAlert(message: "Password and confirm password do not match")
                 return
             }
-            // Account creation successful, perform action here
-            
-            // Store data in Firebase
-            
-            // Open main application view controller
-            let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = viewController
         }
+        else {
+            self.displayAlert(message: "Required Field Missing")
+            return
+        }
+    }
+    
+    // ----- Create Account -----
+    @IBAction func haveAccount() {
+        
+        performSegue(withIdentifier: "LoginSegue", sender: nil)
+        
+    }
+    
+    func displayAlert(message: String) {
+        
+        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
     }
 
 

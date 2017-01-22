@@ -13,8 +13,10 @@ class BookingConfirmationViewController: UIViewController, UIPickerViewDataSourc
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var timePicker: UIPickerView!
     
+    var place: Place?
+    
     // Time for bookings
-    var timeDataSource = ["10:00 - 10:30", "10:30 - 11:00", "11:00 - 11:30", "11:30 -12:00", "12:30 - 13:00"]
+    var timeDataSource = ["10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00"]
     var selectedTime: String = ""
 
     override func viewDidLoad() {
@@ -61,9 +63,61 @@ class BookingConfirmationViewController: UIViewController, UIPickerViewDataSourc
     
     // Confirm booking
     @IBAction func confirmBookingClicked() {
-        getSelectedDate()
         
+        let email = AppState.sharedInstance.email!
+        let userID = AppState.sharedInstance.email!.hashValue
+        let date = getSelectedDate()
+        let time = selectedTime
+//        let strTime = date + " " + time
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+//        let d: Date = formatter.date(from: strTime)
+//        let milliseconds = d.timeIntervalSince1970
+        let placeID = place?.placeId!
+        let placeName = place?.placeName!
+        let lat = place?.location?.coordinate.latitude
+        let lng = place?.location?.coordinate.longitude
+        
+        let status = "Pending"
+        
+        let tmp: String = email + placeID! + date + time;
+        let appointmentID: Int = tmp.hashValue
+        
+        let bookingVal: NSDictionary = ["serviceproviderId": placeID, "status": status, "timeSlot": time]
+        let dt: String = "" + date + "//" + time
+        let bookingChild: String = "bookings//" + placeID! + "//" + dt
+        
+        FirebaseHelper.save(child: bookingChild, value: bookingVal)
+        
+        let appointmentVal: NSDictionary = ["appointmentId": appointmentID, "userId": userID, "serviceProviderId": placeID, "serviceProviderName": placeName, "lat": lat, "lng": lng, "date": date, "time": time, "speciality": AppState.sharedInstance.category]
+        let appointmentChild: String = "appointment//" + String(userID) + "//" + String(appointmentID)
+        
+        FirebaseHelper.save(child: appointmentChild, value: appointmentVal)
+        
+        self.displayAlert(message: "Appointment Request Sent")
     }
+    
+    func bookingDone() {
+        
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = viewController
+        let tabBarController: UITabBarController = (appDelegate.window?.rootViewController as? UITabBarController)!
+        tabBarController.selectedIndex = 1
+    }
+    
+    func displayAlert(message: String) {
+        
+        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+            // whatever else you need to do here
+            self.bookingDone()
+        }))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     
     
     /*

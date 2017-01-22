@@ -14,6 +14,8 @@ class SubCategoryViewController: UITableViewController {
     let cellIdentifier = "SubCategoryCell"
     let spListSegue = "ServiceProvidersListViewControllerSegue"
     
+    var subCategories: NSDictionary = ["Health": ["Dentist", "Doctor", "Gym", "Hospital", "Physiotherapist", "Veterinary Care"], "Beautician": ["Beauty Salon", "Hair Care", "Spa"]]
+    
 //    var subC: [String] {
 //        get {
 //            if let subC = subCategories[selectedCategory] {
@@ -23,11 +25,15 @@ class SubCategoryViewController: UITableViewController {
 //            }
 //        }
 //    }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Sub-Category"
 
-        performSegue(withIdentifier: spListSegue, sender: nil)
+//        subCategories.setValue(["DENTIST", "DOCTOR", "GYM", "HOSPITAL", "PHYSIOTHERAPIST", "VETERINARY_CARE"], forUndefinedKey: "Health")
+//        subCategories.setValue(["BEAUTY_SALON", "HAIR_CARE", "SPA"], forUndefinedKey: "Beautician")
+//        performSegue(withIdentifier: spListSegue, sender: nil)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,10 +42,6 @@ class SubCategoryViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
@@ -50,18 +52,41 @@ class SubCategoryViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let subCat = subCategories.value(forKey: selectedCategory!)
+        return (subCat as! [String]).count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
 
         // Configure the cell...
-
+        let subCat = subCategories.value(forKey: selectedCategory!)
+        cell.textLabel?.text = (subCat as! [String])[indexPath.row]
         return cell
     }
-    */
+    
+    
+    // MARK: - Table view Delegate Methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        performSegue(withIdentifier: spListSegue, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            print("others--")
+            let subCat = subCategories.value(forKey: selectedCategory!)
+            let category = (subCat as! [String])[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "_")
+            
+            let destinationViewController = segue.destination as! ServiceProvidersListViewController
+            destinationViewController.selectedFinalCategory = category
+            AppState.sharedInstance.category = selectedCategory
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

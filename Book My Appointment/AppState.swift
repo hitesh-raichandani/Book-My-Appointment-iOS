@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import GooglePlaces
 
 class AppState: NSObject {
     
     static let sharedInstance = AppState()
     
     var signedIn = false
+    var location: CLLocation? = nil
+    var email: String?
+    var category: String?
     
 }

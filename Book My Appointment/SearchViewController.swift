@@ -9,12 +9,17 @@
 import UIKit
 import GooglePlaces
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchDisplayDelegate {
 
     @IBOutlet weak var textField: UITextField?
     var fetcher: GMSAutocompleteFetcher?
 //    vsr result: String?
     var segueIdentifier = "BusinessViewControllerSegue"
+    
+    // use table data source
+    var searchBar: UISearchBar?
+    var tableDataSource: GMSAutocompleteTableDataSource?
+    var mySearchDisplayController: UISearchDisplayController?
     
     
     override func viewDidLoad() {
@@ -24,42 +29,63 @@ class SearchViewController: UIViewController {
 //        self.edgesForExtendedLayout = .None
         
         // Set bounds to inner-west Sydney Australia.
-        let neBoundsCorner = CLLocationCoordinate2D(latitude: -37.843366,
-                                                    longitude: 151.134002)
-        let swBoundsCorner = CLLocationCoordinate2D(latitude: -33.875725,
-                                                    longitude: 151.200349)
-        let bounds = GMSCoordinateBounds(coordinate: neBoundsCorner,
-                                         coordinate: swBoundsCorner)
-        
-        // Set up the autocomplete filter.
-        let filter = GMSAutocompleteFilter()
-        filter.type = .address
-        
-        // Create the fetcher.
-        fetcher = GMSAutocompleteFetcher(bounds: bounds, filter: filter)
-        fetcher?.delegate = self
-        
-//        textField = UITextField(frame: CGRect(x: 5.0, y: 0, width: self.view.bounds.size.width - 5.0, height: 44.0))
-//        textField?.autoresizingMask = .flexibleWidth
-//        textField?.addTarget(self, action: Selector(("textFieldDidChange:")), for: .editingChanged)
-        textField?.addTarget(self, action: #selector(SearchViewController.textFieldDidChange), for: .editingChanged)
-        
-//        var resultText = UITextView(frame: CGRect(x: 0, y: 45.0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 45.0))
-//        resultText?.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
-//        resultText?.text = "No Results"
-//        resultText?.editable = false
-//        
-//        self.view.addSubview(textField!)
-//        self.view.addSubview(resultText!)
         
         performSegue(withIdentifier: segueIdentifier, sender: nil)
 
+        
+//        let neBoundsCorner = CLLocationCoordinate2D(latitude: -37.843366,
+//                                                    longitude: 151.134002)
+//        let swBoundsCorner = CLLocationCoordinate2D(latitude: -33.875725,
+//                                                    longitude: 151.200349)
+//        let bounds = GMSCoordinateBounds(coordinate: neBoundsCorner,
+//                                         coordinate: swBoundsCorner)
+//        
+//        // Set up the autocomplete filter.
+//        let filter = GMSAutocompleteFilter()
+//        filter.type = .address
+//        
+//        // Create the fetcher.
+//        fetcher = GMSAutocompleteFetcher(bounds: bounds, filter: filter)
+////        fetcher?.delegate = self
+//        
+////        textField = UITextField(frame: CGRect(x: 5.0, y: 0, width: self.view.bounds.size.width - 5.0, height: 44.0))
+////        textField?.autoresizingMask = .flexibleWidth
+////        textField?.addTarget(self, action: Selector(("textFieldDidChange:")), for: .editingChanged)
+//        textField?.addTarget(self, action: #selector(SearchViewController.textFieldDidChange), for: .editingChanged)
+//        
+////        var resultText = UITextView(frame: CGRect(x: 0, y: 45.0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 45.0))
+////        resultText?.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
+////        resultText?.text = "No Results"
+////        resultText?.editable = false
+////        
+////        self.view.addSubview(textField!)
+////        self.view.addSubview(resultText!)
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        // Table data source
+//        searchBar = UISearchBar(frame: CGRect(x: 0, y: 480.0, width: self.view.bounds.size.width, height: 44.0))
+//        
+//        tableDataSource = GMSAutocompleteTableDataSource()
+//        tableDataSource?.delegate = self
+//        
+//        mySearchDisplayController = UISearchDisplayController(searchBar: searchBar!, contentsController: self)
+//        mySearchDisplayController?.searchResultsDataSource = tableDataSource
+//        mySearchDisplayController?.searchResultsDelegate = tableDataSource
+//        mySearchDisplayController?.delegate = self
+//
+//        self.view.addSubview(searchBar!)
     }
     
     func textFieldDidChange(textField: UITextField) {
-        let url: String = "https://maps.googleapis.com/maps/api/place/autocomplete/json?type=dentist&key=AIzaSyBm5MbHM3bhvPpzUlmwlLkGHSCJUccjUIY&input=\(textField.text!)"
+//        let url: String = "https://maps.googleapis.com/maps/api/place/autocomplete/json?type=dentist&key=AIzaSyBm5MbHM3bhvPpzUlmwlLkGHSCJUccjUIY&input=\(textField.text!)"
         if textField.text != nil {
-            WebServiceHelper.getData(url: url)
+//            WebServiceHelper.getData(url: url, controller: self)
         }
         //fetcher?.sourceTextHasChanged(textField.text!)
         
@@ -73,8 +99,30 @@ class SearchViewController: UIViewController {
 //        self.present(autocompleteController, animated: true, completion: nil)
 //    }
     
+    
+    
+    
+    
+    
+    
+    // Table data source
+    func didUpdateAutocompletePredictionsForTableDataSource(tableDataSource: GMSAutocompleteTableDataSource) {
+        // Turn the network activity indicator off.
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        // Reload table data.
+        mySearchDisplayController?.searchResultsTableView.reloadData()
+    }
+    
+    func didRequestAutocompletePredictionsForTableDataSource(tableDataSource: GMSAutocompleteTableDataSource) {
+        // Turn the network activity indicator on.
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        // Reload table data.
+        mySearchDisplayController?.searchResultsTableView.reloadData()
+    }
+    
 }
 
+/*
 extension SearchViewController: GMSAutocompleteFetcherDelegate {
     /**
      * Called when autocomplete predictions are available.
@@ -98,6 +146,39 @@ extension SearchViewController: GMSAutocompleteFetcherDelegate {
         print("\n\nPlaces Error\n-----\n", error.localizedDescription)
     }
 }
+*/
+
+
+
+// Table data source
+extension SearchViewController: GMSAutocompleteTableDataSourceDelegate {
+    func tableDataSource(_ didAutocompleteWithtableDataSource: GMSAutocompleteTableDataSource, didAutocompleteWith place: GMSPlace) {
+        mySearchDisplayController?.isActive = false
+        // Do something with the selected place.
+        print("Place name: \(place.name)")
+        print("Place address: \(place.formattedAddress)")
+        print("Place attributions: \(place.attributions)")
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String?) -> Bool {
+        tableDataSource?.sourceTextHasChanged(searchString)
+//        print(searchString)
+        return false
+    }
+    
+    func tableDataSource(_ tableDataSource: GMSAutocompleteTableDataSource, didFailAutocompleteWithError error: Error) {
+        // TODO: Handle the error.
+        print("Error: \(error)")
+    }
+    
+    func tableDataSource(_ tableDataSource: GMSAutocompleteTableDataSource, didSelect prediction: GMSAutocompletePrediction) -> Bool {
+        
+        print(prediction.attributedPrimaryText.string, " - ", prediction.types)
+        
+        return true
+    }
+}
+
 
 // Extension for GMSAutocompleteFetcher
 /*

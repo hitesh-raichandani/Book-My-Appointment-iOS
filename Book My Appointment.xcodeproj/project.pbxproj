@@ -17,6 +17,9 @@
 		6720A2B71DD873F200C6BE3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2B51DD873F200C6BE3E /* LaunchScreen.storyboard */; };
 		6720A2C21DD873F200C6BE3E /* Book_My_AppointmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2C11DD873F200C6BE3E /* Book_My_AppointmentTests.swift */; };
 		6720A2CD1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */; };
+		673A17831DFAB44000C72674 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A17821DFAB44000C72674 /* FirebaseHelper.swift */; };
+		673A17861DFAC97C00C72674 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A17851DFAC97C00C72674 /* Booking.swift */; };
+		673A17881DFACA1900C72674 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A17871DFACA1900C72674 /* Appointment.swift */; };
 		6740497A1DEAC8CC00F85D8F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674049791DEAC8CC00F85D8F /* SearchViewController.swift */; };
 		6740497C1DEBDCC200F85D8F /* WebServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740497B1DEBDCC200F85D8F /* WebServiceHelper.swift */; };
 		674603211DEEDFF800395A85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6720A2AD1DD873F200C6BE3E /* Main.storyboard */; };
@@ -27,6 +30,7 @@
 		67A02A961DEEE8F600D7E3C2 /* ServiceProvidersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674049751DE50B5300F85D8F /* ServiceProvidersListViewController.swift */; };
 		67A02A981DF004DB00D7E3C2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A02A971DF004DB00D7E3C2 /* SignupViewController.swift */; };
 		67B46EDF1DF65161005EE3CF /* BookingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B46EDE1DF65161005EE3CF /* BookingConfirmationViewController.swift */; };
+		67B46F311DFA1660005EE3CF /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B46F301DFA1660005EE3CF /* Place.swift */; };
 		67E23F401DD87E56001F21DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67E23F3F1DD87E56001F21DF /* GoogleService-Info.plist */; };
 		67E23F431DD8880C001F21DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E23F421DD8880C001F21DF /* LoginViewController.swift */; };
 		83026035D816219B72B5AA77 /* Pods_Book_My_Appointment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3F92EE6EBF7A38ED63A4BC /* Pods_Book_My_Appointment.framework */; };
@@ -74,6 +78,9 @@
 		6720A2C81DD873F200C6BE3E /* Book My AppointmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book My AppointmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6720A2CC1DD873F200C6BE3E /* Book_My_AppointmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_My_AppointmentUITests.swift; sourceTree = "<group>"; };
 		6720A2CE1DD873F200C6BE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		673A17821DFAB44000C72674 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		673A17851DFAC97C00C72674 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		673A17871DFACA1900C72674 /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		674049751DE50B5300F85D8F /* ServiceProvidersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvidersListViewController.swift; sourceTree = "<group>"; };
 		674049791DEAC8CC00F85D8F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6740497B1DEBDCC200F85D8F /* WebServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceHelper.swift; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 		6794D52B1DDB1D440021B325 /* Book My Appointment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Book My Appointment.entitlements"; sourceTree = "<group>"; };
 		67A02A971DF004DB00D7E3C2 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		67B46EDE1DF65161005EE3CF /* BookingConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingConfirmationViewController.swift; sourceTree = "<group>"; };
+		67B46F301DFA1660005EE3CF /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		67E23F3F1DD87E56001F21DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Book My Appointment/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67E23F421DD8880C001F21DF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		759BBF142BE2C477B0AADE1E /* Pods-Book My AppointmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book My AppointmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Book My AppointmentTests/Pods-Book My AppointmentTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 		6720A2A81DD873F200C6BE3E /* Book My Appointment */ = {
 			isa = PBXGroup;
 			children = (
+				673A17841DFAC96A00C72674 /* Beans */,
 				6794D52B1DDB1D440021B325 /* Book My Appointment.entitlements */,
 				6720A2A91DD873F200C6BE3E /* AppDelegate.swift */,
 				67E23F411DD885A3001F21DF /* Controllers */,
@@ -193,11 +202,21 @@
 			path = "Book My AppointmentUITests";
 			sourceTree = "<group>";
 		};
+		673A17841DFAC96A00C72674 /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				673A17851DFAC97C00C72674 /* Booking.swift */,
+				673A17871DFACA1900C72674 /* Appointment.swift */,
+			);
+			name = Beans;
+			sourceTree = "<group>";
+		};
 		6794D5231DDB0B5B0021B325 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				6794D5241DDB0BFF0021B325 /* MeasurementHelper.swift */,
 				6740497B1DEBDCC200F85D8F /* WebServiceHelper.swift */,
+				673A17821DFAB44000C72674 /* FirebaseHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -206,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				6794D5271DDB0D5F0021B325 /* AppState.swift */,
+				67B46F301DFA1660005EE3CF /* Place.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -531,11 +551,14 @@
 				671C96401DE1AB74000D21CB /* AppointmentHistoryViewController.swift in Sources */,
 				6794D5251DDB0BFF0021B325 /* MeasurementHelper.swift in Sources */,
 				67B46EDF1DF65161005EE3CF /* BookingConfirmationViewController.swift in Sources */,
+				673A17831DFAB44000C72674 /* FirebaseHelper.swift in Sources */,
 				6794D5281DDB0D5F0021B325 /* AppState.swift in Sources */,
 				67E23F431DD8880C001F21DF /* LoginViewController.swift in Sources */,
+				673A17861DFAC97C00C72674 /* Booking.swift in Sources */,
 				671C96421DE3D63D000D21CB /* TempLogoutViewController.swift in Sources */,
 				6740497A1DEAC8CC00F85D8F /* SearchViewController.swift in Sources */,
 				676C8F101DF1951900FF70BB /* BusinessPageViewController.swift in Sources */,
+				67B46F311DFA1660005EE3CF /* Place.swift in Sources */,
 				6720A2B21DD873F200C6BE3E /* Book_My_Appointment.xcdatamodeld in Sources */,
 				67A02A981DF004DB00D7E3C2 /* SignupViewController.swift in Sources */,
 				6740497C1DEBDCC200F85D8F /* WebServiceHelper.swift in Sources */,
@@ -543,6 +566,7 @@
 				67A02A961DEEE8F600D7E3C2 /* ServiceProvidersListViewController.swift in Sources */,
 				6720A2AA1DD873F200C6BE3E /* AppDelegate.swift in Sources */,
 				671C96871DE3FE22000D21CB /* SubCategoryViewController.swift in Sources */,
+				673A17881DFACA1900C72674 /* Appointment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +639,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -665,6 +690,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -694,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CB8FB245764067573D66372 /* Pods-Book My Appointment.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Book My Appointment/Book My Appointment.entitlements";
@@ -746,6 +773,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F56C7F6C8BD56B13BB63E3E1 /* Pods-Book My Appointment.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Book My Appointment/Book My Appointment.entitlements";

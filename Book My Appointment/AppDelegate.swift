@@ -1,4 +1,4 @@
-//
+    //
 //  AppDelegate.swift
 //  Book My Appointment
 //
@@ -79,7 +79,7 @@ class   AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     // func for Facebook sign in and Google Sign In
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        var handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+        let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
         // Add any custom logic here
         return handled
         
@@ -113,6 +113,8 @@ class   AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let viewController = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarController")
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = viewController
+            
+            AppState.sharedInstance.email = user?.email
             
         }
         
