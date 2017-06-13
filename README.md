@@ -12,8 +12,7 @@
 
 ▸ Option to sort the results by distance or rating
 
-<img width="423" alt="sort-by" src="https://user-images.githubusercontent.com/18255000/27087092-e8663ecc-5008-11e7-84e7-f5d5b8014f35.png">
-
+<img width="423" alt="sort-by" src="https://user-images.githubusercontent.com/18255000/27087092-e8663ecc-5008-11e7-84e7-f5d5b8014f35.png"> <img width="423" alt="sp-list" src="https://user-images.githubusercontent.com/18255000/27088341-4157df42-500c-11e7-9ca3-375053113714.png">
 
 <img width="423" alt="sp-details" src="https://user-images.githubusercontent.com/18255000/27087102-ee7ef52e-5008-11e7-92d6-7526fb686762.png"> <img width="423" alt="book" src="https://user-images.githubusercontent.com/18255000/27087111-f23dcbf4-5008-11e7-94c1-7c48cef27ff9.png">
 
